@@ -133,6 +133,7 @@
   <ItemGroup>
     <ClInclude Include="Colors.h" />
     <ClInclude Include="Handle.h" />
+    <ClInclude Include="Macros.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="PCH.h" />
   </ItemGroup>

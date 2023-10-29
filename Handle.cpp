@@ -1,5 +1,6 @@
 #include "Handle.h"
 #include "Colors.h"
+#include "Macros.h"
 
 using namespace std;
 
@@ -42,9 +43,7 @@ int getCenter(std::string s) {
 
 void pause() {
 	setColor(YELLOW);
-
-	int k = getCenter("Press any key to continue . . .");
-	setLeft(k, "");
+	setLeft(MARGIN, "");
 	system("pause");
 	std::cout << "\n";
 }
@@ -56,7 +55,7 @@ void clear() {
 void error(string s) {
 	setColor(RED);
 	std::cout << endl;
-	setCenter(s);
+	setLeft(MARGIN, s);
 	std::cout << endl;
 	pause();
 }

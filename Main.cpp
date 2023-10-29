@@ -2,11 +2,10 @@
 #include "Main.h"
 #include "Handle.h"
 #include "Colors.h"
+#include "Macros.h"
 
 typedef long long int ll;
 using namespace std;
-
-#define MARGIN getCenter("-----------------------------------")
 
 /* List of function prototypes */
 int mainWindow();
@@ -22,7 +21,8 @@ void modWindow();
 int mainWindow() {
 	clear();
 	setColor(BLUE);
-	setCenter("CALCULATOR APPLICATION");
+	std::cout << endl;
+	setLeft(MARGIN, "CALCULATOR APPLICATION\n");
 	std::cout << endl;
 
 	setColor(AQUA);
@@ -134,7 +134,6 @@ void divWindow() {
 	else {
 		error("Invalid operation : Division by zero is undefined.");
 	}
-	pause();
 }
 
 void expWindow() {
@@ -168,6 +167,7 @@ void modWindow() {
 
 int main()
 {
+	system("color 07");
 	while (true) {
 		int code = mainWindow();
 
